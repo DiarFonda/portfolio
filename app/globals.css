@@ -6,4 +6,11 @@
   body {
     @apply font-primary bg-secondary text-primary leading-loose dark:bg-primary dark:text-secondary;
   }
+
+  .listItem {
+    @apply font-extralight leading-6 text-sm;
+  }
+  .listItem b {
+    color: theme("colors.accent.DEFAULT");
+  }
 }

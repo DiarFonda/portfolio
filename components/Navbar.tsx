@@ -8,11 +8,11 @@ import ToggleTheme from "./ui/ToggleTheme";
 export const Navbar = () => {
   return (
     <nav className="container mx-auto flex justify-between mt-4 ">
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobileNav />
       </div>
-      <div className="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-        <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4S md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+      <div className="hidden w-full lg:block lg:w-auto" id="navbar-multi-level">
+        <ul className="flex flex-col items-center font-medium p-4 lg:p-0 mt-4S lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 ">
           <Nav />
           <li>
             <Link href="resume">

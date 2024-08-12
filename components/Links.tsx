@@ -24,12 +24,12 @@ const links = [
 
 const Nav = () => {
   const pathname = usePathname();
-  return links.map((link, index) => {
+  return links.map((link) => {
     return (
       <li>
         <Link
           href={link.path}
-          key={index}
+          key={link.path}
           className={`${
             link.path === pathname && "text-accent border-b-2 border-accent"
           } capitalize font-medium hover:text-accent transition-all`}
