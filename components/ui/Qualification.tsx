@@ -36,7 +36,7 @@ const resume = [
                       Interacted with <b>MySQL</b> and <b>PostgreSQL</b> databases using Prisma.
                     </p>`,
     pointFive: `  <p className="listItem">
-                      Configure <b>CI/CD</b> pipelines using BitbuckeT
+                      Configure <b>CI/CD</b> pipelines using Bitbucket
                     </p>`,
   },
 ];
@@ -76,8 +76,8 @@ const Qualification = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
       </Carousel>
     </motion.div>
   );
