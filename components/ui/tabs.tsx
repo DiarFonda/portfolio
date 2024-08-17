@@ -14,8 +14,7 @@ const toggleVariants = cva(
     variants: {
       variant: {
         default: "bg-transparent",
-        focused:
-          "outline-none ring-2 ring-accent ring-offset-2 dark:accent text-accent",
+        focused: "outline-none ring-2 ring-accent ring-offset-2 text-accent",
       },
     },
     defaultVariants: {
