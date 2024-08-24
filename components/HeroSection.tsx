@@ -3,10 +3,13 @@
 import { Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
+import { Popover, PopoverContent } from "./ui/popover";
+import { PopoverTrigger } from "@radix-ui/react-popover";
 
 const HeroSection = () => {
-  const { resolvedTheme } = useTheme();
-  console.log(resolvedTheme);
+  const { resolvedTheme, systemTheme } = useTheme();
+  const baba = localStorage.getItem("theme");
+
   return (
     <div className="text-center lg:text-left">
       <h4>SOFTWARE DEVELOPER</h4>
@@ -19,17 +22,37 @@ const HeroSection = () => {
         full-stack development, including various frontend and backend
         frameworks.
       </p>
-      <div className="flex flex-col lg:flex-row mt-8">
-        <Button
-          variant={`${resolvedTheme === "dark" ? "outline" : "default"}`}
-          size="md"
-          className="uppercase items-center gap-3"
-        >
-          <span>Download Cv</span>
-          <Download />
-        </Button>
-        {/* yet to add the social media icons */}
-      </div>
+      <Popover>
+        <PopoverTrigger>
+          <div className="flex flex-col lg:flex-row mt-8">
+            <Button
+              variant={
+                baba === "system"
+                  ? systemTheme === "dark"
+                    ? "outline"
+                    : "default"
+                  : baba === "dark"
+                  ? "outline"
+                  : "default"
+              }
+              size="md"
+              className="uppercase items-center gap-3"
+            >
+              <span>
+                {/* todo: <a href={cv} download="name cv.pdf"> */}
+                Download Cv
+                {/* </a> */}
+              </span>
+              <Download />
+            </Button>
+          </div>
+        </PopoverTrigger>
+        <PopoverContent>
+          <div className="flex justify-center items-center">
+            CV will be posted soon
+          </div>
+        </PopoverContent>
+      </Popover>
     </div>
   );
 };

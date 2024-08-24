@@ -3,21 +3,21 @@
 import Image from "next/image";
 import { Progress } from "./progress";
 
-const SkillsProgress = ({ skill }) => {
+const SkillsProgress = ({ skill }: { skill: any }) => {
   return (
-    <div className="flex ml-24 mt-4 items-center">
-      <div className="flex flex-col items-center mb-4">
+    <div className="flex lg:ml-24 mt-4 items-center lg:items-center justify-evenly w-full">
+      <div className="flex flex-col items-start lg:items-center mb-4 w-28">
         <Image
-          src={`/assets/prisma.png`}
+          src={`/assets/${skill.icon}.png`}
           alt=""
           width={24}
           height={24}
           priority
         />
-        <p className="">Prisma</p>
+        <p className="">{skill.title}</p>
       </div>
 
-      <Progress value={50} className="w-96 ml-12" />
+      <Progress value={skill.percentage} className="w-44 lg:w-96 lg:ml-12" />
     </div>
   );
 };

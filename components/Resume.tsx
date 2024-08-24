@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Briefcase, GraduationCap } from "lucide-react";
 import Qualification from "./ui/Qualification";
+import { resume, education } from "@/lib/data";
 
 const Resume = ({ isListView }: { isListView?: boolean }) => {
   return (
@@ -20,9 +21,11 @@ const Resume = ({ isListView }: { isListView?: boolean }) => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="experience">
-          <Qualification isListView={isListView} />
+          <Qualification isListView={isListView} resume={resume} />
         </TabsContent>
-        <TabsContent value="education">Change your password here.</TabsContent>
+        <TabsContent value="education">
+          <Qualification isListView={isListView} education={education} />
+        </TabsContent>
       </Tabs>
     </div>
   );

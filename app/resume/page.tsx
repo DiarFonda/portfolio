@@ -1,18 +1,17 @@
 "use client";
+// todo: will use context api to manage list view
+
 import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
-// temporary WIP
-
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { skills } from "@/lib/data";
 import { LayoutGrid, List } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 const page = () => {
   const [listView, setListView] = useState(false);
   return (
-    <div className="container flex flex-col items-center ">
+    <div className="container flex flex-col items-center mb-6">
       <div className="self-end lg:mr-20 mt-14">
         <Tabs>
           <TabsList>
@@ -35,7 +34,7 @@ const page = () => {
       </div>
 
       <div className="container flex flex-col items-center">
-        <h1 className="font-bold mt-16 text-2xl lg:text-2xl leading-[1.1]">
+        <h1 className="font-bold mt-0 text-2xl lg:text-2xl leading-[1.1]">
           My <span className="text-accent font-semibold">Resume</span>
         </h1>
         <Resume isListView={listView} />

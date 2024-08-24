@@ -15,7 +15,7 @@ export const Navbar = () => {
         <ul className="flex flex-col items-center font-medium p-4 lg:p-0 mt-4S lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 ">
           <Nav />
           <li>
-            <Link href="resume">
+            <Link href="contact">
               <Button className="rounded-md bg-accent p-2 hover:bg-lime-800 shadow-md">
                 Hire Me
               </Button>
