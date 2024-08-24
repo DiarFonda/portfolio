@@ -4,7 +4,7 @@ import { Briefcase, GraduationCap } from "lucide-react";
 import Qualification from "./ui/Qualification";
 import { resume, education } from "@/lib/data";
 
-const Resume = ({ isListView }: { isListView?: boolean }) => {
+const ResumeContent = ({ isListView }: { isListView?: boolean }) => {
   return (
     <div className="mt-14">
       <Tabs
@@ -31,4 +31,4 @@ const Resume = ({ isListView }: { isListView?: boolean }) => {
   );
 };
 
-export default Resume;
+export default ResumeContent;

@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 
-const page = () => {
+const Contact = () => {
   const { toast } = useToast();
 
   const formSchema = z.object({
@@ -210,4 +210,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;

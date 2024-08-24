@@ -50,7 +50,7 @@ const Qualification = ({
       {/* {!isListView ? ( */}
       <Carousel>
         <CarouselContent>
-          {(resume || education).map((exp) => (
+          {(resume || education).map((exp: any) => (
             <CarouselItem key={exp.id}>
               <Card>
                 <CardHeader>

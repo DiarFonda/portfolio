@@ -1,21 +1,22 @@
 import SkillsProgress from "./ui/SkillsProgress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import Image from "next/image";
+// todo fix types
 
 const Skills = ({ skills, listView }: { skills: any; listView: boolean }) => {
-  const feSkills = skills.filter((skill) => {
+  const feSkills = skills.filter((skill: any) => {
     return skill.type === "frontend";
   });
-  const beSkills = skills.filter((skill) => {
+  const beSkills = skills.filter((skill: any) => {
     return skill.type === "backend";
   });
-  const dbSkills = skills.filter((skill) => {
+  const dbSkills = skills.filter((skill: any) => {
     return skill.type === "database";
   });
-  const testSkills = skills.filter((skill) => {
+  const testSkills = skills.filter((skill: any) => {
     return skill.type === "test";
   });
-  const devopsSkills = skills.filter((skill) => {
+  const devopsSkills = skills.filter((skill: any) => {
     return skill.type === "devops";
   });
 
@@ -58,43 +59,43 @@ const Skills = ({ skills, listView }: { skills: any; listView: boolean }) => {
       </TabsList>
       <TabsContent value="frontend">
         <div className="flex flex-col">
-          {feSkills.map((skill) => (
-            <SkillsProgress skill={skill} />
+          {feSkills.map((skill: any) => (
+            <SkillsProgress skill={skill} key={skill.id} />
           ))}
         </div>
       </TabsContent>
       <TabsContent value="backend">
         <div className="flex flex-col">
-          {beSkills.map((skill) => (
-            <SkillsProgress skill={skill} />
+          {beSkills.map((skill: any) => (
+            <SkillsProgress skill={skill} key={skill.id} />
           ))}
         </div>
       </TabsContent>
       <TabsContent value="database">
         <div className="flex flex-col">
-          {dbSkills.map((skill) => (
-            <SkillsProgress skill={skill} />
+          {dbSkills.map((skill: any) => (
+            <SkillsProgress skill={skill} key={skill.id} />
           ))}
         </div>
       </TabsContent>
       <TabsContent value="test">
         <div className="flex flex-col">
-          {testSkills.map((skill) => (
-            <SkillsProgress skill={skill} />
+          {testSkills.map((skill: any) => (
+            <SkillsProgress skill={skill} key={skill.id} />
           ))}
         </div>
       </TabsContent>
       <TabsContent value="devops">
         <div className="flex flex-col">
-          {devopsSkills.map((skill) => (
-            <SkillsProgress skill={skill} />
+          {devopsSkills.map((skill: any) => (
+            <SkillsProgress skill={skill} key={skill.id} />
           ))}
         </div>
       </TabsContent>
     </Tabs>
   ) : (
     <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
-      {skills.map((skill) => (
+      {skills.map((skill: any) => (
         <div
           className="flex flex-col items-center mx-4 lg:mx-12"
           key={skill.id}

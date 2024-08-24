@@ -65,10 +65,10 @@ const projects = [
   },
 ];
 
-const page = () => {
+const Projects = () => {
   const [api, setApi] = useState<CarouselApi>();
   const { systemTheme } = useTheme();
-  const baba = localStorage.getItem("theme");
+  const localTheme = localStorage.getItem("theme");
   const [project, setProject] = useState(projects[0]);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -157,11 +157,11 @@ const page = () => {
                       <div className="relative w-full h-full">
                         <Image
                           src={String(
-                            baba === "system"
+                            localTheme === "system"
                               ? systemTheme === "dark"
                                 ? project.image
                                 : project.image2
-                              : baba === "dark"
+                              : localTheme === "dark"
                               ? project.image
                               : project.image2 || project.image
                           )}
@@ -184,4 +184,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;
