@@ -56,7 +56,7 @@ const projects = [
     category: "",
     title: "SOON",
     description:
-      "em ipsum dolor sit amet consectetur adipisicing elit. Et, magnam repellendus repudiandae alias excepturi neque minima nobis sequi quisquam laborum.",
+      "Contributed to the development of Pabau, where I played a key role in building and optimizing software solutions using a full-stack approach with React, Next.js, and Node.js, while ensuring code quality and scalability through Nx monorepo architecture and Bitbucket pipelines.",
     stack: [],
     image: `/assets/projectssdark.png`,
     image2: "/assets/projectss.png",
@@ -151,7 +151,7 @@ const page = () => {
           <div className="mx-auto w-[80%] lg:w-[50%] ">
             <Carousel setApi={setApi} className=" lg:h-[520px] lg:ml-16 mb-12">
               <CarouselContent>
-                {projects.map((project, index) => (
+                {projects.map((project) => (
                   <CarouselItem key={project.num} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-transparent">
                       <div className="relative w-full h-full">
