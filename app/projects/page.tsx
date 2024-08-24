@@ -16,59 +16,17 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-
-const projects = [
+import dynamic from "next/dynamic";
+const DynamicCarousel = dynamic(
+  () => import("@/components/ui/ProjectCarousel"),
   {
-    num: "01",
-    category: "Full Stack",
-    title: "Pabau Clinic Software",
-    description:
-      "em ipsum dolor sit amet consectetur adipisicing elit. Et, magnam repellendus repudiandae alias excepturi neque minima nobis sequi quisquam laborum.",
-    stack: [
-      { name: "NextJs" },
-      { name: "NodeJs" },
-      { name: "GraphQl" },
-      { name: "PostgresSql" },
-    ],
-    image: "/assets/work/pabau.avif",
-    live: "",
-    github: "",
-  },
-  {
-    num: "02",
-    category: "Front End",
-    title: "Portfolio",
-    description:
-      "Created a personal portfolio to showcase my front-end skills, utilizing Next.js, Tailwind CSS, and shadcn UI components to deliver a sleek, responsive, and interactive user experience",
-    stack: [
-      { name: "NextJs" },
-      { name: "Tailwind" },
-      { name: "ShadCn" },
-      { name: "Resend" },
-    ],
-    image: `/assets/work/portfolio.png`,
-    image2: "/assets/work/darkportfolio.png",
-    live: "diarfonda.com",
-    github: "https://github.com/DiarFonda/portfolio",
-  },
-  {
-    num: "03",
-    category: "",
-    title: "SOON",
-    description:
-      "Contributed to the development of Pabau, where I played a key role in building and optimizing software solutions using a full-stack approach with React, Next.js, and Node.js, while ensuring code quality and scalability through Nx monorepo architecture and Bitbucket pipelines.",
-    stack: [],
-    image: `/assets/projectssdark.png`,
-    image2: "/assets/projectss.png",
-    live: "",
-    github: "",
-  },
-];
+    ssr: false,
+  }
+);
+import { projects } from "@/lib/data";
 
 const Projects = () => {
   const [api, setApi] = useState<CarouselApi>();
-  const { systemTheme } = useTheme();
-  const localTheme = localStorage.getItem("theme");
   const [project, setProject] = useState(projects[0]);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -105,7 +63,7 @@ const Projects = () => {
                 {project.description}
               </p>
               <ul className="flex gap-[2px] lg:gap-2">
-                {project.stack.map((skill, index) => {
+                {project.stack.map((skill: any, index: number) => {
                   return (
                     <li
                       className="text-base lg:text-xl text-accent"
@@ -148,36 +106,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-[80%] lg:w-[50%] ">
-            <Carousel setApi={setApi} className=" lg:h-[520px] lg:ml-16 mb-12">
-              <CarouselContent>
-                {projects.map((project) => (
-                  <CarouselItem key={project.num} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-transparent">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={String(
-                            localTheme === "system"
-                              ? systemTheme === "dark"
-                                ? project.image
-                                : project.image2
-                              : localTheme === "dark"
-                              ? project.image
-                              : project.image2 || project.image
-                          )}
-                          fill
-                          className="object-contain"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="" />
-              <CarouselNext className="" />
-            </Carousel>
-          </div>
+          <DynamicCarousel setApi={setApi} />
         </div>
       </div>
     </div>

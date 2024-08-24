@@ -1,6 +1,54 @@
 import { Linkedin, Github, Mail, Instagram } from "lucide-react";
 import React from "react";
 
+export const projects = [
+  {
+    num: "01",
+    category: "Full Stack",
+    title: "Pabau Clinic Software",
+    description:
+      "em ipsum dolor sit amet consectetur adipisicing elit. Et, magnam repellendus repudiandae alias excepturi neque minima nobis sequi quisquam laborum.",
+    stack: [
+      { name: "NextJs" },
+      { name: "NodeJs" },
+      { name: "GraphQl" },
+      { name: "PostgresSql" },
+    ],
+    image: "/assets/work/pabau.avif",
+    live: "",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "Front End",
+    title: "Portfolio",
+    description:
+      "Created a personal portfolio to showcase my front-end skills, utilizing Next.js, Tailwind CSS, and shadcn UI components to deliver a sleek, responsive, and interactive user experience",
+    stack: [
+      { name: "NextJs" },
+      { name: "Tailwind" },
+      { name: "ShadCn" },
+      { name: "Resend" },
+    ],
+    image: `/assets/work/portfolio.png`,
+    image2: "/assets/work/darkportfolio.png",
+    live: "diarfonda.com",
+    github: "https://github.com/DiarFonda/portfolio",
+  },
+  {
+    num: "03",
+    category: "",
+    title: "SOON",
+    description:
+      "Contributed to the development of Pabau, where I played a key role in building and optimizing software solutions using a full-stack approach with React, Next.js, and Node.js, while ensuring code quality and scalability through Nx monorepo architecture and Bitbucket pipelines.",
+    stack: [],
+    image: `/assets/projectssdark.png`,
+    image2: "/assets/projectss.png",
+    live: "",
+    github: "",
+  },
+];
+
 export const resume = [
   {
     id: 1,
