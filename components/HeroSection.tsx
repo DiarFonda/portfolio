@@ -7,7 +7,7 @@ import { Popover, PopoverContent } from "./ui/popover";
 import { PopoverTrigger } from "@radix-ui/react-popover";
 
 const HeroSection = () => {
-  const { resolvedTheme, systemTheme } = useTheme();
+  const { systemTheme } = useTheme();
   const baba = localStorage.getItem("theme");
 
   return (

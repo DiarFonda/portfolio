@@ -43,7 +43,7 @@ const Resume = () => {
         My <span className="text-accent font-semibold">Skills</span>
       </h1>
 
-      <div className="container flex flex-wrap">
+      <div className="container flex flex-wrap mt-4">
         <Skills skills={skills} listView={listView} />
       </div>
     </div>
