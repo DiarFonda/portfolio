@@ -9,10 +9,20 @@ import {
 } from "./carousel";
 import { projects } from "@/lib/data";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const ProjectCarousel = ({ setApi }: any) => {
-  const localTheme = localStorage.getItem("theme");
+  const [localTheme, setLocalTheme] = useState("");
+
   const { systemTheme } = useTheme();
+
+  const isDarkMode =
+    localTheme === "system" ? systemTheme === "dark" : localTheme === "dark";
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    setLocalTheme(storedTheme || "light");
+  }, []);
 
   return (
     <div className="mx-auto w-[80%] lg:w-[50%] ">
@@ -24,11 +34,7 @@ const ProjectCarousel = ({ setApi }: any) => {
                 <div className="relative w-full h-full">
                   <Image
                     src={String(
-                      localTheme === "system"
-                        ? systemTheme === "dark"
-                          ? project.image
-                          : project.image2
-                        : localTheme === "dark"
+                      isDarkMode
                         ? project.image
                         : project.image2 || project.image
                     )}

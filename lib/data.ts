@@ -7,7 +7,7 @@ export const projects = [
     category: "Full Stack",
     title: "Pabau Clinic Software",
     description:
-      "em ipsum dolor sit amet consectetur adipisicing elit. Et, magnam repellendus repudiandae alias excepturi neque minima nobis sequi quisquam laborum.",
+      "Contributed to the development of Pabau, where I played a key role in building and optimizing software solutions using a full-stack approach with React, Next.js, and Node.js, while ensuring code quality and scalability through Nx monorepo architecture and Bitbucket pipelines.",
     stack: [
       { name: "NextJs" },
       { name: "NodeJs" },
@@ -39,8 +39,7 @@ export const projects = [
     num: "03",
     category: "",
     title: "SOON",
-    description:
-      "Contributed to the development of Pabau, where I played a key role in building and optimizing software solutions using a full-stack approach with React, Next.js, and Node.js, while ensuring code quality and scalability through Nx monorepo architecture and Bitbucket pipelines.",
+    description: "More Projects will be posted here soon",
     stack: [],
     image: `/assets/projectssdark.png`,
     image2: "/assets/projectss.png",

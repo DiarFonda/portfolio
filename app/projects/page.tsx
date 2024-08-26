@@ -5,17 +5,6 @@ import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Github, MoveUpRight } from "lucide-react";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import Image from "next/image";
-import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 const DynamicCarousel = dynamic(
   () => import("@/components/ui/ProjectCarousel"),
@@ -24,23 +13,17 @@ const DynamicCarousel = dynamic(
   }
 );
 import { projects } from "@/lib/data";
+import { CarouselApi } from "@/components/ui/carousel";
 
 const Projects = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [project, setProject] = useState(projects[0]);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
   useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-
       setProject(projects[api.selectedScrollSnap()]);
     });
   }, [api]);

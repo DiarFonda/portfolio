@@ -5,10 +5,20 @@ import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
 import { Popover, PopoverContent } from "./ui/popover";
 import { PopoverTrigger } from "@radix-ui/react-popover";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [localTheme, setLocalTheme] = useState("");
+
   const { systemTheme } = useTheme();
-  const baba = localStorage.getItem("theme");
+
+  const isDarkMode =
+    localTheme === "system" ? systemTheme === "dark" : localTheme === "dark";
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    setLocalTheme(storedTheme || "light");
+  }, []);
 
   return (
     <div className="text-center lg:text-left">
@@ -26,15 +36,7 @@ const HeroSection = () => {
         <PopoverTrigger>
           <div className="flex flex-col lg:flex-row mt-8">
             <Button
-              variant={
-                baba === "system"
-                  ? systemTheme === "dark"
-                    ? "outline"
-                    : "default"
-                  : baba === "dark"
-                  ? "outline"
-                  : "default"
-              }
+              variant={isDarkMode ? "outline" : "default"}
               size="md"
               className="uppercase items-center gap-3"
             >

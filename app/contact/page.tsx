@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/lib/hooks/use-toast";
 import {
   Form,
   FormControl,
