@@ -12,17 +12,19 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const ProjectCarousel = ({ setApi }: any) => {
-  const [localTheme, setLocalTheme] = useState("");
-
-  const { systemTheme } = useTheme();
-
-  const isDarkMode =
-    localTheme === "system" ? systemTheme === "dark" : localTheme === "dark";
+  const { systemTheme, theme } = useTheme();
+  const [resolvedTheme, setResolvedTheme] = useState("");
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    setLocalTheme(storedTheme || "light");
-  }, []);
+    // Detect and set the theme immediately on the first render
+    if (theme === "system") {
+      setResolvedTheme(String(systemTheme));
+    } else {
+      setResolvedTheme(String(theme));
+    }
+  }, [theme, systemTheme]);
+
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <div className="mx-auto w-[80%] lg:w-[50%] ">

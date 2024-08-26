@@ -14,7 +14,7 @@ export const projects = [
       { name: "GraphQl" },
       { name: "PostgresSql" },
     ],
-    image: "/assets/work/pabau.avif",
+    image: "/assets/work/pabau.png",
     live: "",
     github: "",
   },
