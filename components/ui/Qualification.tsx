@@ -47,12 +47,14 @@ const Qualification = ({
       }}
       className="flex flex-col"
     >
+      {/* <p className="listItem">Test content</p> */}
+
       {/* {!isListView ? ( */}
       <Carousel>
         <CarouselContent>
           {(resume || education).map((exp: any) => (
             <CarouselItem key={exp.id}>
-              <Card>
+              <Card className="w-[300px] md:w-[400px]">
                 <CardHeader>
                   <CardTitle>{exp.title}</CardTitle>
                   <CardDescription className="text-accent">
@@ -61,7 +63,7 @@ const Qualification = ({
                   <CardDescription>{exp.company}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="marker:text-accent list-disc ml-3">
+                  <ul className="marker:text-accent list-disc md:ml-3">
                     {exp.pointOne && (
                       <li key={exp.pointOne}>{parse(exp.pointOne)}</li>
                     )}
@@ -83,8 +85,8 @@ const Qualification = ({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:flex" />
-        <CarouselNext className="hidden md:flex" />
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
       {/* ) todo fix this : ( */}
       {/* <div>

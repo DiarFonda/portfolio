@@ -16,7 +16,6 @@ const ProjectCarousel = ({ setApi }: any) => {
   const [resolvedTheme, setResolvedTheme] = useState("");
 
   useEffect(() => {
-    // Detect and set the theme immediately on the first render
     if (theme === "system") {
       setResolvedTheme(String(systemTheme));
     } else {

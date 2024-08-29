@@ -31,7 +31,7 @@ export const Social = () => {
         return social.name === "Gmail" ? (
           <Popover key={social.name}>
             <PopoverTrigger>
-              <div className="flex-1 flex flex-col justify-center gap-4 rounded-lg hover:bg-slate-800 dark:hover:bg-secondary-darker border-8 border-accent border-double p-5 dark:bg-primary-darker dark:hover:text-primary hover:text-secondary hover:border-solid hover:border-4 cursor-pointer transition	">
+              <div className="flex-1 flex flex-col justify-center gap-4 rounded-lg hover:bg-slate-800 dark:hover:bg-secondary-darker border-8 border-accent border-double py-5 px-2 lg:p-5 dark:bg-primary-darker dark:hover:text-primary hover:text-secondary hover:border-solid hover:border-4 cursor-pointer transition	">
                 <div className="w-full flex justify-between items-center">
                   <div>{social.icon}</div>
                 </div>
@@ -57,7 +57,7 @@ export const Social = () => {
         ) : (
           <Link
             key={social.name}
-            className="flex-1 flex flex-col justify-center gap-4 rounded-lg hover:bg-slate-800 dark:hover:bg-secondary-darker border-8 border-accent border-double p-5 dark:bg-primary-darker dark:hover:text-primary hover:text-secondary hover:border-solid hover:border-4 cursor-pointer transition	"
+            className="flex-1 flex flex-col justify-center gap-4 rounded-lg hover:bg-slate-800 dark:hover:bg-secondary-darker border-8 border-accent border-double py-5 px-2 lg:p-5 dark:bg-primary-darker dark:hover:text-primary hover:text-secondary hover:border-solid hover:border-4 cursor-pointer transition	"
             href={social.href}
             target="_blank"
           >

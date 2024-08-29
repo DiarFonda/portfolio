@@ -9,14 +9,14 @@ const ResumeContent = ({ isListView }: { isListView?: boolean }) => {
     <div className="mt-14">
       <Tabs
         defaultValue="experience"
-        className="w-[400px] flex flex-col justify-center"
+        className="w-[400px] flex flex-col justify-center items-center"
       >
-        <TabsList className="flex justify-around">
-          <TabsTrigger value="experience">
+        <TabsList className="flex justify-around w-[400px]">
+          <TabsTrigger value="experience" className="mr-2">
             <Briefcase className="mr-2" />
             Experience
           </TabsTrigger>
-          <TabsTrigger value="education">
+          <TabsTrigger value="education" className="ml-2">
             <GraduationCap className="mr-2" /> Education
           </TabsTrigger>
         </TabsList>

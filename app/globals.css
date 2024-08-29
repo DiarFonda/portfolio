@@ -8,7 +8,7 @@
   }
 
   .listItem {
-    @apply font-extralight leading-6 text-sm;
+    @apply font-extralight md:leading-6 mb-1 text-xs md:text-sm;
   }
   .listItem b {
     color: theme("colors.accent.DEFAULT");
