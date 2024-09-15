@@ -51,24 +51,47 @@ export const projects = [
 export const resume = [
   {
     id: 1,
-    title: "Software Developer",
-    date: "dec 2022 - Present",
+    title: "Software Engineer",
+    date: "Jun 2023 - Present",
     startDate: "12/1/2022",
     company: "Pabau Clinic Software",
     pointOne: `   <p className="listItem">
-                        Engineered full-stack solutions using <b>NextJs</b> for the front end and <b>NodeJs/NestJs</b> for the back end.
+                         Implemented and optimized CI/CD pipelines using <b>Bitbucket Pipelines</b>, streamlining the deployment process and ensuring high-quality code delivery.
                       </p>`,
     pointTwo: `<p className="listItem">
-                        Designed and managed database schemas and queries with <b>Prisma</b>, interacting with <b>MySQL</b> and <b>PostgreSQL</b> databases.
+                         Configured custom <b>ESLint rules</b>, enhancing code consistency and improving the overall developer experience across the team.
                       </p>`,
     pointThree: ` <p className="listItem">
-                        Automated deployment processes and enhanced code reliability through CI/CD pipelines configured in <b>Bitbucket</b>
+                       Developed and maintained scalable backend services using <b>NestJS</b>, contributing to the architecture and functionality of key application features.
                       </p>`,
     pointFour: `  <p className="listItem">
-                      Led the implementation of monorepo architecture using <b>Nx</b> and configured <b>Bitbucket pipelines</b>, enhancing automated deployment processes.
+                       Managed and optimized <b>PostgreSQL</b> and <b>MySQL</b> databases, ensuring data integrity, performance, and scalability to meet business requirements
                       </p>`,
     pointFive: `  <p className="listItem">
-                        Ensured robust application performance by conducting end-to-end (e2e) testing with <b>Cypress</b> and <b>Playwright</b>, along with unit testing using <b>Jest</b>.
+                        Integrated monitoring and error-tracking tools such as <b>New Relic apm</b> and <b>Sentry</b> to enhance system reliability and observability.
+                      </p>`,
+  },
+  {
+    id: 2,
+    title: "Front End Developer ",
+    date: "Jan 2023 - June 2023",
+    startDate: "12/1/2022",
+    company: "Pabau Clinic Software",
+    pointOne: `   <p className="listItem">
+                         Built and optimized dynamic, high-performance web applications using <b>NextJs</b>, leveraging server-side rendering and static site generation for enhanced user experience.
+                      </p>`,
+    pointTwo: `<p className="listItem">
+                         Utilized <b>GraphQL</b> APIs and <b>Prisma</b> for efficient data querying and management, enabling flexible and precise interactions between the front end and the backend
+                      </p>`,
+    pointThree: ` <p className="listItem">
+                       Employed <b>Zustand</b> for state management, streamlining application state handling and improving overall performance and maintainability
+                      </p>`,
+    pointFour: `  <p className="listItem">
+                       Designed and implemented visually appealing and responsive user interfaces using <b>Ant Design</b>, <b>Less</b>, and <b>Styled Components</b>, ensuring a consistent and scalable design system.
+                      </p>`,
+    pointFive: `  <p className="listItem">
+                        Developed robust unit tests using <b>Jest</b> and implemented end-to-end testing, transitioning from <b>Cypress</b> to <b>Playwright</b>, to ensure reliability and stability of applications.
+
                       </p>`,
   },
 ];
